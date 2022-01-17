@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+  <style media="screen">
+
+    :root{
+      --arctan: calc(50vw / 2vh);
+    }
+
+    *,
+    *::after,
+    *::before{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .section{
+      position: relative;
+      background-color: transparent;
+      width:100%;
+      height:100vh;
+    }
+
+    .box1{
+      position: absolute;
+      width: 200px;
+      height:200px;
+      top:10%;
+      left:10%;
+      /* transform: translate(-50%, -50%); */
+      background-color: red;
+    }
+
+    .box2{
+      position: absolute;
+      width: 200px;
+      height:200px;
+      top:70%;
+      left:60%;
+      /* transform: translate(-50%, -50%); */
+      background-color: yellow;
+    }
+
+    .arrow{
+      position: absolute;
+      top:calc(200px + 10%);
+      left:calc(200px + 10%);
+      transform-origin: left;
+      border-bottom: 0.4vw dashed #ccc;
+      transform:rotate(31.25deg); /* 31.25deg */
+      /* toa    arctan = Opposite / Adjacent */
+      /*
+      Adjacent --------------|
+      Angle                  |
+                             |
+                             |
+                             |
+                          Opposite
+      So in this case I think just Adjacent = 50 (60%-10%) Width
+      opposite = 60 (70%-10%) Height
+       */
+      height:10px;
+      width:50vw;
+      background-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <!-- <img class="image2" src="img/DSC09395-2.jpg" alt=""> -->
+  <div class="section">
+    <div class="box1">
+
+    </div>
+    <div class="arrow">
+
+    </div>
+    <div class="box2">
+
+    </div>
+  </div>
+</body>
+</html>
